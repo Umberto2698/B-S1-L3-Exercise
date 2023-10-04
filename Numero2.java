@@ -1,4 +1,4 @@
-import entities.Sim;
+import phone.Sim;
 
 public class Numero2 {
     public static void main(String[] args) {
@@ -17,7 +17,5 @@ public class Numero2 {
         System.out.println(secondoNumero.toString());
         secondoNumero.call(terzoNumero);
         System.out.println(secondoNumero.toString());
-
-
     }
 }

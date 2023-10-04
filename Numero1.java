@@ -1,4 +1,4 @@
-import entities.Rettangolo;
+import figure.Rettangolo;
 
 public class Numero1 {
     public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class Numero1 {
     }
 
     public static void stampaRettangolo(Object o) {
-        if (o.getClass() != entities.Rettangolo.class) {
+        if (o.getClass() != figure.Rettangolo.class) {
             System.out.println("Questo metodo funziona solo sui rettangoli.");
         } else {
             Rettangolo rettangolo = (Rettangolo) o;
@@ -23,7 +23,7 @@ public class Numero1 {
     }
 
     public static void stampaDueRettangoli(Object o1, Object o2) {
-        if (o1.getClass() != entities.Rettangolo.class || o2.getClass() != entities.Rettangolo.class) {
+        if (o1.getClass() != figure.Rettangolo.class || o2.getClass() != figure.Rettangolo.class) {
             System.out.println("Questo metodo funziona solo sui rettangoli.");
 
         } else {

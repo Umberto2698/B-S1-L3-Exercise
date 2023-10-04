@@ -1,4 +1,4 @@
-package entities;
+package figure;
 
 
 public class Rettangolo {
@@ -7,13 +7,8 @@ public class Rettangolo {
     private double width;
 
     public Rettangolo(double height, double width) {
-        if (height > 0 && width > 0) {
-            this.height = height;
-            this.width = width;
-        } else {
-            System.out.println("Inserisci un'altezza e una larghezza maggiori di 0");
-        }
-
+        this.height = setHeight(height);
+        this.width = setWidth(width);
     }
 
     public double perimetro() {
@@ -29,23 +24,25 @@ public class Rettangolo {
         return height;
     }
 
-    public void setHeight(double height) {
+    public double setHeight(double height) {
         if (height > 0) {
             this.height = height;
         } else {
             System.out.println("Inserisci un'altezza maggiore di 0");
         }
+        return height;
     }
 
     public double getWidth() {
         return width;
     }
 
-    public void setWidth(double width) {
+    public double setWidth(double width) {
         if (width > 0) {
             this.width = width;
         } else {
             System.out.println("Inserisci una larghezza maggiore di 0");
         }
+        return width;
     }
 }

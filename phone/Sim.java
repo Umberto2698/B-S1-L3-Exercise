@@ -1,4 +1,4 @@
-package entities;
+package phone;
 
 import java.util.Arrays;
 
@@ -8,13 +8,10 @@ public class Sim {
     private String[] callList;
 
     public Sim(long number) {
-        if (number < 1000000000 || number >= 10000000000L) {
-            System.out.println("Inserisci un numero intero maggiore di 1000000000 e minore di 10000000000.");
-        } else {
-            this.number = number;
-            this.credit = 0;
-            this.callList = new String[5];
-        }
+        this.number = setNumber(number);
+        this.credit = 0;
+        this.callList = new String[5];
+
     }
 
     public void call(Object o) {
@@ -67,12 +64,13 @@ public class Sim {
         return number;
     }
 
-    public void setNumber(long number) {
+    public long setNumber(long number) {
         if (number < 1000000000 || number >= 10000000000L) {
             System.out.println("Inserisci un numero intero maggiore di 1000000000 e minore di 10000000000.");
         } else {
             this.number = number;
         }
+        return number;
     }
 
     public double getCredit() {
