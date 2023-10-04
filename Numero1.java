@@ -1,6 +1,6 @@
 import entities.Rettangolo;
 
-public class Main {
+public class Numero1 {
     public static void main(String[] args) {
 
         Rettangolo primoRettangolo = new Rettangolo(12.4, 7.5);
