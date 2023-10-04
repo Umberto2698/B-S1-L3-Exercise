@@ -7,8 +7,13 @@ public class Rettangolo {
     private double width;
 
     public Rettangolo(double height, double width) {
-        this.height = setHeight(height);
-        this.width = setWidth(width);
+        if (height > 0 && width > 0) {
+            this.height = height;
+            this.width = width;
+        } else {
+            System.out.println("Inserisci un'altezza e una larghezza maggiori di 0");
+        }
+
     }
 
     public double perimetro() {
@@ -24,25 +29,23 @@ public class Rettangolo {
         return height;
     }
 
-    public double setHeight(double height) {
+    public void setHeight(double height) {
         if (height > 0) {
             this.height = height;
         } else {
             System.out.println("Inserisci un'altezza maggiore di 0");
         }
-        return height;
     }
 
     public double getWidth() {
         return width;
     }
 
-    public double setWidth(double width) {
+    public void setWidth(double width) {
         if (width > 0) {
             this.width = width;
         } else {
             System.out.println("Inserisci una larghezza maggiore di 0");
         }
-        return width;
     }
 }

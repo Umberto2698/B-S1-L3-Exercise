@@ -11,6 +11,9 @@ public class Numero1 {
 
         stampaRettangolo(primoRettangolo);
         stampaDueRettangoli(primoRettangolo, secondoRettangolo);
+
+        System.out.println(primoRettangolo.getClass());
+
     }
 
     public static void stampaRettangolo(Object o) {
